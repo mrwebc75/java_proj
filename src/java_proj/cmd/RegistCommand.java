@@ -2,6 +2,7 @@ package java_proj.cmd;
 
 import java_proj.common.Factory;
 import java_proj.common.Util;
+import java_proj.except.DuplicateMemberIdException;
 import java_proj.model.MemberDTO;
 import java_proj.srv.RegistService;
 
@@ -39,7 +40,11 @@ public class RegistCommand implements Command {
     // 장점이 있다.
     RegistService regSrv = Factory.getInstance().getRegSrv();
 
-    regSrv.regist(dto);
+    try {
+      regSrv.regist(dto);
+    } catch (DuplicateMemberIdException e) {
+      System.out.println("에러 : " + e.getMessage());
+    }
 
   }
 
