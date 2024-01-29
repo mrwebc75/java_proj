@@ -30,4 +30,9 @@ public class MemberDAO {
     mapDB.put(vo.getId(), vo);
   }
 
+  // 회원삭제
+  public void delete(String id) {
+    mapDB.remove(id);
+  }
+
 }

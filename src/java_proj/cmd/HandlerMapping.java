@@ -24,7 +24,7 @@ public class HandlerMapping {
     cmdMap.put("list", new ListCommand());
     cmdMap.put("info", new InfoCommand());
     cmdMap.put("modify", new ModifyCommand());
-//    cmdMap.put("del", new DelCommand());
+    cmdMap.put("del", new DelCommand());
 //    cmdMap.put("search", new SearchCommand());    
   }
 

@@ -1,6 +1,7 @@
 package java_proj.common;
 
 import java_proj.dao.MemberDAO;
+import java_proj.srv.DeleteService;
 import java_proj.srv.InfoService;
 import java_proj.srv.ListService;
 import java_proj.srv.ModifyService;
@@ -54,5 +55,25 @@ public class Factory {
   public ModifyService getModifySrv() {
     return modifySrv;
   }
+  
+  //회원삭제
+  private DeleteService delSrv = new DeleteService(dao);
+  public DeleteService getDelSrv() {
+    return delSrv;
+  }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
