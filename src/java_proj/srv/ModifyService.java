@@ -30,9 +30,9 @@ public class ModifyService {
     vo.setName(dto.getName());
     vo.setEmail(dto.getEmail());
     vo.setPhone(dto.getPhone());
-    vo.setPwd(dto.getPwd());
+    vo.setPwd(dto.getConfirmPwd());
 
-    dao.update(null);
+    dao.update(vo);
     System.out.println("수정했습니다.");
   }
 }

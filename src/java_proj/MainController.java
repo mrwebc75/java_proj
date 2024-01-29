@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import java_proj.cmd.Command;
 import java_proj.cmd.HandlerMapping;
+import java_proj.common.Util;
 
 public class MainController {
 
@@ -14,6 +15,7 @@ public class MainController {
     Command cmd = null;
 
     while (true) {
+      Util.help();
 
       System.out.println("명령어를 입력하세요");
       String userInput = sc.nextLine();
