@@ -13,6 +13,7 @@ public class InfoCommand implements Command {
     if (userInputs.length != 2) {
       System.out.println("입력하신 정보가 형식에 맞지 않습니다. 다시 입력해 주세요~!");
       Util.help();
+      return;
     }
 
     // infoSrv 주입처리

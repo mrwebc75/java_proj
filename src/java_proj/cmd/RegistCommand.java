@@ -15,6 +15,7 @@ public class RegistCommand implements Command {
     if (userInputs.length != 7) {
       System.out.println("입력하신 정보가 형식에 맞지 않습니다. 다시 입력해 주세요~!");
       Util.help();
+      return;
     }
 
     // 전달받은 데이터를 DTO에 담는다.
