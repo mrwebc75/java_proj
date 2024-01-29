@@ -1,5 +1,7 @@
 package java_proj.common;
 
+import java_proj.model.MemberVO;
+
 public class Util {
 
   // 전체가 static 메소드로 이루어져 있는 유틸클래스들은 객체를 인스턴스화 할 필요가 없기 때문에
@@ -27,7 +29,7 @@ public class Util {
   }
 
   // 회원정보를 출력하는 함수
-  public static void print() {
-
+  public static void print(MemberVO vo) {
+    System.out.println(vo.toString());
   }
 }

@@ -1,5 +1,6 @@
 package java_proj.dao;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -17,6 +18,11 @@ public class MemberDAO {
   // 전달받은 id로 등록된 회원유무 확인함수
   public MemberVO selectOne(String id) {
     return mapDB.get(id);// MemberVO 객체 리턴
+  }
+
+  // 전체회원 목록
+  public Collection<MemberVO> selectList() {
+    return mapDB.values();
   }
 
 }

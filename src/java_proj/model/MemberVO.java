@@ -15,4 +15,5 @@ public class MemberVO {
   private String phone;
   private String pwd;
   private Date regDate;
+
 }
