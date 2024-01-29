@@ -21,7 +21,7 @@ public class HandlerMapping {
   // 팩토리 패턴
   private HandlerMapping() {
     cmdMap.put("new", new RegistCommand());
-//    cmdMap.put("list", new ListCommand());
+    cmdMap.put("list", new ListCommand());
 //    cmdMap.put("modify", new ModifyCommand());
 //    cmdMap.put("del", new DelCommand());
 //    cmdMap.put("info", new InfoCommand());

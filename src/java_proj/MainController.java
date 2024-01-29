@@ -26,8 +26,8 @@ public class MainController {
         cmd.execute(userInputs);
 
       } else if (userInput.compareToIgnoreCase("list") == 0) {
-//        cmd = HandlerMapping.getInstance().getCommand("list");
-//        cmd.execute(userInputs);
+        cmd = HandlerMapping.getInstance().getCommand("list");
+        cmd.execute(userInputs);
 
       } else if (userInput.startsWith("info")) {
 

@@ -1,5 +1,7 @@
 package java_proj.common;
 
+import java.text.SimpleDateFormat;
+
 import java_proj.model.MemberVO;
 
 public class Util {
@@ -30,6 +32,33 @@ public class Util {
 
   // 회원정보를 출력하는 함수
   public static void print(MemberVO vo) {
-    System.out.println(vo.toString());
+    
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+
+    System.out.println(
+        "회원정보 - 아이디:"+vo.getId()
+        +", 이메일:"+vo.getEmail()
+        +", 이름:"+vo.getName()
+        +", 암호:"+vo.getPwd()
+        +", 폰번호:"+vo.getPhone()
+        +", 등록일:"+sdf.format(vo.getRegDate())
+    );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
