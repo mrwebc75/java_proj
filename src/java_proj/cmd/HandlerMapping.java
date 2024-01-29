@@ -25,7 +25,7 @@ public class HandlerMapping {
     cmdMap.put("info", new InfoCommand());
     cmdMap.put("modify", new ModifyCommand());
     cmdMap.put("del", new DelCommand());
-//    cmdMap.put("search", new SearchCommand());    
+    cmdMap.put("search", new SearchCommand());
   }
 
   // 클라이언트에 알맞은 Command 객체를 공급하는 함수

@@ -6,6 +6,7 @@ import java_proj.srv.InfoService;
 import java_proj.srv.ListService;
 import java_proj.srv.ModifyService;
 import java_proj.srv.RegistService;
+import java_proj.srv.SearchService;
 
 //객체를 생성하고 필요로 하는 클래스에 의존객체를 주입해주는 DI담당 클래스 
 public class Factory {
@@ -61,7 +62,13 @@ public class Factory {
   public DeleteService getDelSrv() {
     return delSrv;
   }
-
+  
+  
+  //회원검색
+  private SearchService srchSrv = new SearchService(dao);
+  public SearchService getSrchSrv() {
+    return srchSrv;
+  }
 }
 
 
