@@ -25,4 +25,9 @@ public class MemberDAO {
     return mapDB.values();
   }
 
+  // 정보수정
+  public void update(MemberVO vo) {
+    mapDB.put(vo.getId(), vo);
+  }
+
 }

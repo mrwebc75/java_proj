@@ -1,7 +1,9 @@
 package java_proj.common;
 
 import java_proj.dao.MemberDAO;
+import java_proj.srv.InfoService;
 import java_proj.srv.ListService;
+import java_proj.srv.ModifyService;
 import java_proj.srv.RegistService;
 
 //객체를 생성하고 필요로 하는 클래스에 의존객체를 주입해주는 DI담당 클래스 
@@ -25,32 +27,32 @@ public class Factory {
 
   private MemberDAO dao = new MemberDAO();
 
-  
-  //회원등록
+  // 회원등록
   private RegistService regSrv = new RegistService(dao);
+
   public RegistService getRegSrv() {
     return regSrv;
   }
-  
-  //전체리스트
+
+  // 전체리스트
   private ListService lstSrv = new ListService(dao);
+
   public ListService getLstSrv() {
     return lstSrv;
   }
 
+  // 단일회원정보 -> infoSrv
+  private InfoService infoSrv = new InfoService(dao);
+
+  public InfoService getInfoSrv() {
+    return infoSrv;
+  }
+
+  // 회원정보수정
+  private ModifyService modifySrv = new ModifyService(dao);
+
+  public ModifyService getModifySrv() {
+    return modifySrv;
+  }
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -30,8 +30,10 @@ public class MainController {
         cmd.execute(userInputs);
 
       } else if (userInput.startsWith("info")) {
+        cmd = HandlerMapping.getInstance().getCommand("info");
+        cmd.execute(userInputs);
 
-      } else if (userInput.startsWith("change")) {
+      } else if (userInput.startsWith("modify")) {
 
       } else if (userInput.compareToIgnoreCase("help") == 0) {
 

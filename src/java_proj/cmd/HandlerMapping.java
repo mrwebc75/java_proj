@@ -22,9 +22,9 @@ public class HandlerMapping {
   private HandlerMapping() {
     cmdMap.put("new", new RegistCommand());
     cmdMap.put("list", new ListCommand());
+    cmdMap.put("info", new InfoCommand());
 //    cmdMap.put("modify", new ModifyCommand());
 //    cmdMap.put("del", new DelCommand());
-//    cmdMap.put("info", new InfoCommand());
 //    cmdMap.put("search", new SearchCommand());    
   }
 

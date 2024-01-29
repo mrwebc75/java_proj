@@ -2,6 +2,7 @@ package java_proj.common;
 
 import java.text.SimpleDateFormat;
 
+import java_proj.except.MemberNotFoundException;
 import java_proj.model.MemberVO;
 
 public class Util {
@@ -31,34 +32,17 @@ public class Util {
   }
 
   // 회원정보를 출력하는 함수
-  public static void print(MemberVO vo) {
-    
+  public static void print(MemberVO vo) throws MemberNotFoundException {
+
+    // 존재하지 않는 회원(null)에 대한 예외처리
+    // throws 키워드의 의미는 print() 메소드를 호출하는 쪽에서 예외처리를 강제한다는 의미
+    if (vo == null)
+      throw new MemberNotFoundException();
+
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
     System.out.println(
-        "회원정보 - 아이디:"+vo.getId()
-        +", 이메일:"+vo.getEmail()
-        +", 이름:"+vo.getName()
-        +", 암호:"+vo.getPwd()
-        +", 폰번호:"+vo.getPhone()
-        +", 등록일:"+sdf.format(vo.getRegDate())
-    );
+        "회원정보 - 아이디:" + vo.getId() + ", 이메일:" + vo.getEmail() + ", 이름:" + vo.getName() + ", 암호:"
+            + vo.getPwd() + ", 폰번호:" + vo.getPhone() + ", 등록일:" + sdf.format(vo.getRegDate()));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
