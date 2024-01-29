@@ -39,6 +39,10 @@ public class MainController {
         cmd = HandlerMapping.getInstance().getCommand("modify");
         cmd.execute(userInputs);
 
+      } else if (userInput.startsWith("del")) {
+        cmd = HandlerMapping.getInstance().getCommand("del");
+        cmd.execute(userInputs);
+
       } else if (userInput.compareToIgnoreCase("help") == 0) {
 
       } else if (userInput.compareToIgnoreCase("exit") == 0) {

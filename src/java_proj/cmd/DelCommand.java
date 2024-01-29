@@ -2,6 +2,7 @@ package java_proj.cmd;
 
 import java_proj.common.Factory;
 import java_proj.common.Util;
+import java_proj.except.MemberNotFoundException;
 import java_proj.srv.DeleteService;
 
 public class DelCommand implements Command {
@@ -18,7 +19,11 @@ public class DelCommand implements Command {
 
     DeleteService delSrv = Factory.getInstance().getDelSrv();
 
-    delSrv.delMember(userInputs[1]);
+    try {
+      delSrv.delMember(userInputs[1]);
+    } catch (MemberNotFoundException e) {
+      System.out.println("에러 : " + e.getMessage());
+    }
 
   }
 
